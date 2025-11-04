@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><style>
+body  {
+  background-image: url("IBM-cloud.png");
+  background-repeat:no-repeat;
+}
+</style></head>
+<body>
+<h1>Welcome to Keegan & Becker's Midterm Exam Chatbot!</h1>
+</br>
+<p>This chatbot was written for STAT 5350/4350: Applied Deep Learning at the University of Colorado - Boulder, taught by Prof. Portilla.</p>
+
+<p>To use, click the chatbox icon in the bottom-right corner of the screen, and type your queries into the pop-up input field.</p>
+
+<p>Enjoy!</p>
+     <!-- paste your bot script here -->
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "90ae30d3-265d-4a5d-988a-d5dcba3be7f1", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "94646872-417b-458f-92ec-fc2b18f95dcf", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
